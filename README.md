@@ -1,5 +1,9 @@
 # SwaBodh (Know Thyself)
 
+🌐 Live Demo: https://swabodh-6zzuwkgrqkrps9mdlvwnxk.streamlit.app/
+
+💻 Source Code: https://github.com/hemasrivarma11/SwaBodh
+
 A privacy-first personal health intelligence app (hackathon MVP).
 
 - **Trust Layer:** compares readings from several devices, flags unreliable days, detects device drift.
@@ -11,7 +15,7 @@ A privacy-first personal health intelligence app (hackathon MVP).
 SwaBodh is a self-awareness tool, not a medical device. It does not diagnose or give medical advice.
 
 ## Architecture
-Everything runs locally in one Python app (Streamlit). The only external services are Google Gemini
+Deployment architecture: SwaBodh runs as a Python Streamlit application, hosted on Streamlit Community Cloud. Its SQLite storage runs in the hosted application environment, not on each visitor's personal device. Google Gemini and ElevenLabs are optional external integrations requiring user consent. The only external services are Google Gemini
 (optional, sends only calculated facts) and ElevenLabs (optional, sends only briefing text). Both are
 off by default and need a consent switch on the Privacy page. API keys are read from `.env` on the
 server side, sent only in request headers, and never reach the browser.
