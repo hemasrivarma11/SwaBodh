@@ -1,0 +1,22 @@
+# Secrets: NEVER commit these
+.env
+*.pem
+*.key
+.streamlit/secrets.toml
+
+# Local health data and generated audio stay local
+data/*.db
+data/*.sqlite
+data/*.csv
+data/audio_cache/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
